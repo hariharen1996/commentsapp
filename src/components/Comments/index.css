@@ -1,0 +1,78 @@
+/* Write your CSS here */
+.bg-container {
+  font-family: 'Roboto';
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+.heading {
+  align-self: center;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+}
+.img {
+  width: 250px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.count {
+  background-color: #0b69ff;
+  padding: 5px 14px;
+  width: 80px;
+  margin: 20px;
+  color: #ffffff;
+}
+
+.input {
+  padding: 5px 16px;
+  background: transparent;
+  border: 1px solid #425569;
+}
+
+.btn {
+  width: 120px;
+  height: 30px;
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.line {
+  color: #425569;
+}
+
+@media screen and (max-width: 767px) {
+  .img {
+    width: 220px;
+  }
+  .form {
+    order: 1;
+  }
+  .img {
+    order: 0;
+  }
+  .form-container {
+    flex-direction: column;
+  }
+}
