@@ -52,19 +52,22 @@ class Comments extends Component {
         )
       ]
     }`
-    const newCommentsList = {
-      id: uuidv4(),
-      yourName,
-      comments,
-      date: new Date(),
-      isTrue: false,
-      colors: differentColors,
+
+    if (yourName !== '' && comments !== '') {
+      const newCommentsList = {
+        id: uuidv4(),
+        yourName,
+        comments,
+        date: new Date(),
+        isTrue: false,
+        colors: differentColors,
+      }
+      this.setState(prevState => ({
+        data: [...prevState.data, newCommentsList],
+        yourName: '',
+        comments: '',
+      }))
     }
-    this.setState(prevState => ({
-      data: [...prevState.data, newCommentsList],
-      yourName: '',
-      comments: '',
-    }))
   }
 
   render() {
